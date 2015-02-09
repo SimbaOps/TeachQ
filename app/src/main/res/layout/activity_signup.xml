@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+        <Button
+            android:id="@+id/home"
+            android:paddingLeft="15dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_change3"
+            android:text="Home"
+            android:textSize="30sp"/>
+        <TextView
+
+            android:background="#FF6F00"
+            android:id="@+id/title_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:gravity="center"
+            android:textSize="75sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="50dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp">
+
+            />
+            <EditText
+                android:paddingTop="40dp"
+                android:id="@+id/user_enter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username:"
+                android:textSize="40sp"/>
+            />
+            <EditText
+                android:paddingTop="20dp"
+                android:id="@+id/pass_enter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password:"
+                android:textSize="40sp"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/occu"
+                >
+            </Spinner>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            >
+
+            <Button
+                android:background="@drawable/button_change"
+                android:id="@+id/finish_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Finish"
+                android:textSize="40sp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
