@@ -55,19 +55,15 @@ public class MainActivity extends ActionBarActivity {
         mLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final EditText mUsername = (EditText) findViewById(R.id.user_enter);
-                final EditText mPassword = (EditText) findViewById(R.id.pass_enter);
-
-                final String username = mUsername.getText().toString();
-                final String password = mPassword.getText().toString();
+                String username = Utils.getStringFromId(MainActivity.this, R.id.user_enter);
+                String password = Utils.getStringFromId(MainActivity.this, R.id.pass_enter);
                 ParseUser.logInInBackground(username, password, new LogInCallback() {
                     public void done(ParseUser user, ParseException e) {
                         if (user != null) {
-                            if (user.getBoolean("Student") == true);{
+                            if (user.getBoolean("Student") == true) {
                                 Intent i = new Intent(MainActivity.this, StudentsPage.class);
                                 startActivity(i);
-                            }
-                            if (user.getBoolean("Student") == false){
+                            } else {
                                 Intent i = new Intent(MainActivity.this, TeachersPage.class);
                                 startActivity(i);
                             }
